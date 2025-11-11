@@ -18,7 +18,7 @@ export default function App() {
     } else {
       setFilteredMovies(movies.filter(movie => movie.genre === selectGenre))
     }
-  }
+  }, [movies, selectGenre]
 
   )
 
