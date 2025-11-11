@@ -10,11 +10,13 @@ export default function App() {
     { id: 5, title: 'Interstellar', genre: 'Fantascienza' },
     { id: 6, title: 'Pulp Fiction', genre: 'Thriller' },
   ])
-  const [selectgenre, setSelectedGenre] = useState('')
+  const [selectGenre, setSelectedGenre] = useState('')
   const [filteredMovies, setFilteredMovies] = useState(movies)
   useEffect(() => {
     if (selectgenre === '') {
       setFilteredMovies(movies)
+    } else {
+      setFilteredMovies(movies.filter(movie => movie.genre === selectGenre))
     }
   }
 
@@ -31,7 +33,7 @@ export default function App() {
       }
       <h2 style={{ textAlign: 'center' }}>Search the film</h2>
 
-      <select value={selectgenre} onChange={(e) => setSelectedGenre(e.target.value)}>
+      <select value={selectGenre} onChange={(e) => setSelectedGenre(e.target.value)}>
         <option value=''>Inserisci genere da cercare</option>
         <option value='Fantascienza'>Fantascienza</option>
         <option value='Thriller'>Thriller</option>
