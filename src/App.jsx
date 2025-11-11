@@ -25,6 +25,14 @@ export default function App() {
       }
       <h2 style={{ textAlign: 'center' }}>Search the film</h2>
 
+      <select value={selectgenre} onChange={(e) => setSelectedGenre(e.target.value)}>
+        <option value=''>Inserisci genere da cercare</option>
+        <option value='Fantascienza'>Fantascienza</option>
+        <option value='Thriller'>Thriller</option>
+        <option value='Romantico'>Romantico</option>
+        <option value='Azione'>Azione</option>
+      </select>
+
     </>
   )
 
