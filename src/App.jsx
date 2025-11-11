@@ -21,7 +21,7 @@ export default function App() {
 
       ))
       }
-
+      <h2>Search the film</h2>
 
     </>
   )
