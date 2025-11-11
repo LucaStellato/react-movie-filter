@@ -13,7 +13,7 @@ export default function App() {
   const [selectGenre, setSelectedGenre] = useState('')
   const [filteredMovies, setFilteredMovies] = useState(movies)
   useEffect(() => {
-    if (selectgenre === '') {
+    if (selectGenre === '') {
       setFilteredMovies(movies)
     } else {
       setFilteredMovies(movies.filter(movie => movie.genre === selectGenre))
