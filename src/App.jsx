@@ -13,11 +13,17 @@ export default function App() {
 
 
   return (
-    {
-      movies.map((movie) => (
-      
-    ))
-    }
+    <>
+      {movies.map((movie) => (
+        <div key={movie.id} style={{ textAlign: 'center', marginTop: '20px' }}>
+          <p>{movie.title}</p>
+        </div>
+
+      ))
+      }
+
+
+    </>
   )
 
 }
