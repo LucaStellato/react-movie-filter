@@ -1,3 +1,4 @@
+import './App.css';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
@@ -32,14 +33,15 @@ export default function App() {
       ))
       }
       <h2 style={{ textAlign: 'center' }}>Search the film</h2>
-
-      <select value={selectGenre} onChange={(e) => setSelectedGenre(e.target.value)}>
-        <option value=''>Inserisci genere da cercare</option>
-        <option value='Fantascienza'>Fantascienza</option>
-        <option value='Thriller'>Thriller</option>
-        <option value='Romantico'>Romantico</option>
-        <option value='Azione'>Azione</option>
-      </select>
+      <div style={{ textAlign: 'center', marginTop: '20px' }}>
+        <select value={selectGenre} onChange={(e) => setSelectedGenre(e.target.value)}>
+          <option value=''>Inserisci genere da cercare</option>
+          <option value='Fantascienza'>Fantascienza</option>
+          <option value='Thriller'>Thriller</option>
+          <option value='Romantico'>Romantico</option>
+          <option value='Azione'>Azione</option>
+        </select>
+      </div>
 
     </>
   )
