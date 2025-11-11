@@ -12,7 +12,11 @@ export default function App() {
   ])
   const [selectgenre, setSelectedGenre] = useState('')
   const [filteredMovies, setFilteredMovies] = useState(movies)
+  useEffect(() => {
 
+  }
+
+  )
 
   return (
     <>
