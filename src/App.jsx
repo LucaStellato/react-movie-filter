@@ -21,7 +21,7 @@ export default function App() {
 
       ))
       }
-      <h2>Search the film</h2>
+      <h2 style={{ textAlign: 'center' }}>Search the film</h2>
 
     </>
   )
