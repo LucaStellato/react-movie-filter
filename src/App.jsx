@@ -11,6 +11,8 @@ export default function App() {
     { id: 6, title: 'Pulp Fiction', genre: 'Thriller' },
   ])
   const [selectgenre, setSelectedGenre] = useState('')
+  const [filteredMovies, setFilteredMovies] = useState(movies)
+
 
   return (
     <>
