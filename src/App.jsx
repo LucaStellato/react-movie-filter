@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 export default function App() {
-  const [movies, setmovies] = useState([
+  const [movies] = useState([
     { id: 1, title: 'Inception', genre: 'Fantascienza' },
     { id: 2, title: 'Il Padrino', genre: 'Thriller' },
     { id: 3, title: 'Titanic', genre: 'Romantico' },
@@ -35,12 +35,22 @@ export default function App() {
       <h2 style={{ textAlign: 'center' }}>Search the film</h2>
       <div style={{ textAlign: 'center', marginTop: '20px' }}>
         <select value={selectGenre} onChange={(e) => setSelectedGenre(e.target.value)}>
+          <option value=''>Scegli il genere del film da ricercare</option>
+          {movies.map((movie) => (
+            <option value={movie.genre}>{movie.genre}</option>
+
+          )
+
+
+          )}
+        </select>
+        {/*<select value={selectGenre} onChange={(e) => setSelectedGenre(e.target.value)}>
           <option value=''>Inserisci genere da cercare</option>
           <option value='Fantascienza'>Fantascienza</option>
           <option value='Thriller'>Thriller</option>
           <option value='Romantico'>Romantico</option>
           <option value='Azione'>Azione</option>
-        </select>
+        </select>*/}
       </div>
 
     </>
