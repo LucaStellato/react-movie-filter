@@ -10,7 +10,7 @@ export default function App() {
     { id: 5, title: 'Interstellar', genre: 'Fantascienza' },
     { id: 6, title: 'Pulp Fiction', genre: 'Thriller' },
   ])
-
+  const [selectgenre, setSelectedGenre] = useState('')
 
   return (
     <>
